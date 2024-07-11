@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Our Cupcakes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .order-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        .order-form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .item img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 15px;
+            display: none; /* Hide images by default */
+        }
+        .item div {
+            flex: 1;
+        }
+        .item select {
+            width: 100%;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .total {
+            text-align: right;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+        .order-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6f61;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <form class="order-form" onsubmit="return false;" ac>
+        <h1>Order Your Meal</h1>
+        
+        <div class="item">
+            <img id="main-food-img" src="" alt="Main Food Image">
+            <div>
+                <label for="main-food">Main Food</label>
+                <select id="main-food" name="main-food" onchange="updateMainFoodImage()">
+                    <option value="">Select Main Food</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="burger">Burger</option>
+                    <option value="pasta">Pasta</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div>
+                <label for="drink">Drink (Optional)</label>
+                <select id="drink" name="drink">
+                    <option value="">Select Drink</option>
+                    <option value="coke">Coke</option>
+                    <option value="juice">Juice</option>
+                    <option value="water">Water</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div>
+                <label for="dessert">Dessert (Optional)</label>
+                <select id="dessert" name="dessert">
+                    <option value="">Select Dessert</option>
+                    <option value="cake">Cake</option>
+                    <option value="icecream">Ice Cream</option>
+                    <option value="pie">Pie</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="state">State/Province/Region</label>
+            <input type="text" id="state" name="state" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="zip">Postal/Zip Code</label>
+            <input type="text" id="zip" name="zip" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="country">Country/Region</label>
+            <input type="text" id="country" name="country" required>
+        </div>
+        
+        <div class="total">
+            Total: $<span id="total-price">0.00</span>
+        </div>
+        
+        <button type="submit" class="order-button">Order Now</button>
+    </form>
+
+    <script>
+        function updateMainFoodImage() {
+            const mainFood = document.getElementById("main-food").value;
+            const mainFoodImg = document.getElementById("main-food-img");
+            const images = {
+                pizza: "pizza.png",
+                burger: "https://via.placeholder.com/100?text=Burger",
+                pasta: "https://via.placeholder.com/100?text=Pasta"
+            };
+
+            if (mainFood) {
+                mainFoodImg.src = images[mainFood];
+                mainFoodImg.style.display = "block";
+            } else {
+                mainFoodImg.style.display = "none";
+            }
+        }
+
+        function updateTotal() {
+            const prices = {
+                pizza: 10.00,
+                burger: 8.00,
+                pasta: 12.00,
+                coke: 1.50,
+                juice: 2.00,
+                water: 1.00,
+                cake: 3.50,
+                icecream: 4.00,
+                pie: 3.00
+            };
+
+            let total = 0;
+
+            const mainFood = document.getElementById("main-food").value;
+            const drink = document.getElementById("drink").value;
+            const dessert = document.getElementById("dessert").value;
+
+            if (mainFood) total += prices[mainFood];
+            if (drink) total += prices[drink];
+            if (dessert) total += prices[dessert];
+
+            document.getElementById("total-price").innerText = total.toFixed(2);
+        }
+
+        document.getElementById("main-food").addEventListener("change", updateTotal);
+        document.getElementById("drink").addEventListener("change", updateTotal);
+        document.getElementById("dessert").addEventListener("change", updateTotal);
+    </script>
+
+</body>
+</html>

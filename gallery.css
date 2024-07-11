@@ -1,0 +1,60 @@
+.gallery{
+    background-color: #000000d7;
+    width: 100%;
+}
+.gallery h1{
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    padding-top: 80px;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 45px;
+}
+.gallery h2{
+    font-size: 50px;
+    font-family: serif;
+    font-weight: 800;
+    font-style: normal;
+    text-align: left;
+    color: #ff7e00;
+    padding-bottom: 45px;
+    padding-left: 20px;
+}
+.gallery .main-food{
+    display: flex;
+    justify-content: space-around;
+    line-height: 60px;
+    flex-wrap: wrap;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.gallery .dessert-img{
+    display: flex;
+    justify-content: space-around;
+    line-height: 60px;
+    flex-wrap: wrap;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.gallery .drink-img{
+    display: flex;
+    justify-content: space-around;
+    line-height: 60px;
+    flex-wrap: wrap;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.gallery  img{
+   width: 340px;
+   height: 220px;
+   margin-bottom: 20px;
+   border: 10px solid #000;
+   border-radius: 20px;
+   transition: .7s;
+}
+.gallery  img:hover{
+    opacity: .5;
+    cursor: pointer;
+ }

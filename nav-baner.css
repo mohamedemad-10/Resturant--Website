@@ -1,0 +1,222 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    object-fit: cover;
+    width: fit-content;
+    overflow-x: hidden;
+}
+.baner-back{
+    background-image: url(./images/background.jpg);
+    max-height: 130vh;
+    background-size: cover;
+    width: 100%;
+  }
+nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+nav .nav-logo{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 100px;
+}
+nav .nav-logo #img-logo{
+  width: 100px;
+  height: 100px;
+  align-items: start;
+}
+nav .nav-logo #text-logo{
+    align-items: center;
+    font-family: "Ga Maamli", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 37px;
+    color: #f2f2f2;
+}
+nav .nav-logo #text-logo span{
+    color: #ee0a0a;
+}
+nav .nav-list ul{
+    display: flex;
+    gap: 70px;
+    margin-top: 92px;
+}
+nav .nav-list li{
+    list-style: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: italic;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+nav .nav-list a{
+    color: #a7a7a7;
+    text-decoration: none;
+}
+nav .nav-quality #QALITY{
+  width: 100px;
+  height: 100px;
+  margin-top: 60px;
+}
+
+
+.burger {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    top: 80px;
+    left: -10%;
+    justify-content: center;
+  }
+  
+  .burger div {
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all .8s ease;
+  }
+   @media screen and (width: 1024px) {
+    nav .nav-list ul{
+      gap: 30PX;
+  }
+  }
+  /* @media screen and  (max-width: 350px){
+    #navLinks {
+      display: none;
+      flex-direction: column;
+      width: 200px;
+      position: absolute;
+      top: 50px;
+      left: 94%;
+      background-color: #0a0a0ace;
+      text-align: center;
+      transition: all 0.3s ease;
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+    
+    #navLinks.active {
+      display: flex;
+    }
+  
+    .burger {
+      display: block;
+    }
+  }
+  @media screen and  (width: 377px){
+    #navLinks {
+      display: none;
+      flex-direction: column;
+      width: 200px;
+      position: absolute;
+      top: 50px;
+      left: 94%;
+      background-color: #0a0a0ace;
+      text-align: center;
+      transition: all 0.3s ease;
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+    
+    #navLinks.active {
+      display: flex;
+    }
+  
+    .burger {
+      display: block;
+    }
+  } */ 
+  
+  @media screen and (max-width: 768px) {
+    #navLinks {
+      display: none;
+      flex-direction: column;
+      width: 230px;
+      position: absolute;
+      border-radius: 20px;
+      top: 50px; /* Adjust as needed */
+      left: 50%; /* Adjust as needed */
+      transform: translateX(-23%);
+      gap: 40px;
+      background-color: #0a0a0ace;
+      text-align: center;
+      transition: all 0.3s ease;
+      padding: 10px; /* Combine padding properties */
+    }
+  
+    #navLinks.active {
+      display: flex;
+    }
+  
+    .burger {
+      display: block;
+    }
+  }
+  @media screen and (max-width: 427px) {
+    #navLinks {
+      left: 50%; /* Adjust position as needed */
+      transform: translateX(50%);
+    }
+  }
+  @media screen and (max-width: 377px) {
+    #navLinks {
+      left: 50%; /* Adjust position as needed */
+      transform: translateX(55%);
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    #navLinks {
+      left: 40%; /* Adjust position as needed */
+      transform: translateX(78%);
+    }
+  }
+
+/* <<<<<<<<<<<<< BANER >>>>>>>>>>> */
+section .baner{
+    flex-direction: column;
+    width: 100%;
+}
+section .baner .baner-frist h1{
+    font-size: 70px;
+    font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  letter-spacing: 6px;
+  font-style: initial;
+  text-align: left;
+  margin-top: 130px;
+    color: #ffffff;
+    margin-left: 140px;
+}
+section .baner .baner-frist h1 span{
+    font-size: 68px;
+    color: #ffffff71;
+}
+section .baner .baner-second{
+    border: 2px solid #6e6d6e;
+    border-radius: 50px;
+    height: 190px;
+    width: 800px;
+    position: relative;
+    margin-top: 60px;
+    background-color: #00000075;
+    left: -50px;
+}
+section .baner .baner-second p{
+    color: #edecece4;
+    font: 17px sans-serif;
+    line-height: 30px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    margin-left: 180px;
+    font-weight: 600;
+}
+
+

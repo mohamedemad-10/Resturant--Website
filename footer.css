@@ -1,0 +1,71 @@
+footer {
+    width: 100%;
+    background-color: #071110;
+  }
+  
+  footer .footer {
+    margin: auto;
+    padding-top: 90px;
+    justify-content: center;
+    text-align: center;
+  }
+  footer .footer .logo{
+    align-items: center;
+    font-family: "Ga Maamli", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 37px;
+    color: #f2f2f2;
+  }
+  footer .footer .logo span{
+    color: #ee0a0a;
+  }
+  footer .footer div {
+    background: linear-gradient(to center, #1b3732, #132321 75%);
+    background-position: center;
+    width: 600px;
+    margin: auto;
+  }
+  
+  footer .footer ul {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 80px;
+    list-style: none;
+  }
+  
+  footer .footer ul a {
+    list-style: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: italic;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    color: #a7a7a7;
+    text-decoration: none;
+    transition: .8s;
+  }
+  footer .footer ul a:hover {
+    transform: scale(1.2);
+  }
+  footer .footer ul a li i {
+    font-size: 29px;
+    filter: grayscale(100%);
+    border: 10px solid #000;
+    border-radius: 50%;
+  }
+  footer .footer ul a li i:hover {
+    transform: scale(1.2);
+  }
+  
+  footer .footer .copy {
+    font-size: 12px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.492);
+  }
